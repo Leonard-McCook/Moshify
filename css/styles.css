@@ -17,7 +17,7 @@
 /* Typography */
 
 html {
-  /* 62.5% of 16px = 10 px */
+  /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
 
@@ -36,7 +36,6 @@ h3 {
 }
 
 h1 {
-  /* 1 x font size of the html element */
   font-size: 7rem;
 }
 
@@ -214,7 +213,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
@@ -226,11 +225,6 @@ a {
   background: #ec3000;
 }
 
-.btn--block {
-  width: 100%;
-  display: inline-block;
-}
-
 .btn--outline {
   background: #fff;
   color: var(--color-headings);
@@ -240,6 +234,11 @@ a {
 .btn--outline:hover {
   background: var(--color-headings);
   color: #fff;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
 }
 
 @media screen and (min-width: 1024px) {
@@ -293,7 +292,7 @@ a {
   overflow: hidden;
 }
 
-.car__header,
+.card__header,
 .card__body {
   padding: 2rem 3rem;
 }
@@ -372,4 +371,22 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+}
+
+/* Media */
+
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
 }
