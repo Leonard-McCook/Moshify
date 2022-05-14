@@ -16,7 +16,6 @@
 }
 
 /* Typography */
-
 ::selection {
   background: var(--color-primary);
   color: #fff;
@@ -78,16 +77,15 @@ p {
 }
 
 /* Links */
-
 a {
   text-decoration: none;
 }
 
 .link-arrow {
   color: var(--color-accent);
+  text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 .link-arrow::after {
@@ -105,7 +103,6 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Badges */
 
 .badge {
@@ -140,9 +137,7 @@ a {
     font-size: 1.2rem;
   }
 }
-
 /* Lists */
-
 .list {
   list-style: none;
   padding-left: 0;
@@ -169,9 +164,7 @@ a {
     padding-left: 0;
   }
 }
-
 /* Icons */
-
 .icon {
   width: 40px;
   height: 40px;
@@ -205,7 +198,6 @@ a {
 }
 
 /* Buttons */
-
 .btn {
   border-radius: 40px;
   border: 0;
@@ -282,7 +274,6 @@ a {
 }
 
 /* Inputs */
-
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -317,9 +308,7 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Cards */
-
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -350,7 +339,6 @@ a {
 }
 
 /* Plans */
-
 .plan {
   transition: transform 0.2s ease-out;
 }
@@ -426,8 +414,8 @@ a {
     font-size: 1.7rem;
   }
 }
-/* Media */
 
+/* Media */
 .media {
   display: flex;
   margin-bottom: 4rem;
@@ -444,9 +432,7 @@ a {
 .media__image {
   margin-top: 1rem;
 }
-
 /* Quotes */
-
 .quote {
   font-size: 3rem;
   font-style: italic;
@@ -496,7 +482,6 @@ a {
 }
 
 /* Grids */
-
 .grid {
   display: grid;
 }
@@ -514,7 +499,6 @@ a {
 }
 
 /* Testimonials */
-
 .testimonial {
   padding: 3rem;
 }
@@ -535,6 +519,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
@@ -542,11 +530,11 @@ a {
 
   .testimonial .quote {
     margin-left: 6rem;
+    margin-right: 0;
   }
 }
 
 /* Callouts */
-
 .callout {
   padding: 4rem;
   border-radius: 5px;
@@ -576,6 +564,7 @@ a {
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
+
   .callout__content {
     text-align: left;
   }
@@ -587,7 +576,6 @@ a {
 }
 
 /* Collapsibles */
-
 .collapsible__header {
   display: flex;
   justify-content: space-between;
@@ -618,9 +606,7 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
-
 /* Blocks */
-
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
@@ -662,7 +648,6 @@ a {
 }
 
 /* Navigation Bar */
-
 .nav {
   background: #000;
   display: flex;
@@ -750,7 +735,6 @@ a {
 }
 
 /* Domain Block */
-
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
@@ -774,9 +758,7 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
-
 /* Plans Block */
-
 .block-plans .grid {
   gap: 8rem 4rem;
 }
@@ -787,7 +769,6 @@ a {
 }
 
 /* Features */
-
 .feature {
   gap: 4rem 2rem;
   margin: 12rem 0;
@@ -812,7 +793,6 @@ a {
 }
 
 /* Showcase Block */
-
 .block-showcase__image > img {
   width: 100%;
 }
@@ -829,5 +809,85 @@ a {
   .block-showcase__image > img {
     width: auto;
     max-width: 700px;
+  }
+}
+/* Footer */
+.footer {
+  background: #232323;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img {
+  /* TODO: Consider refactoring this and applying it to 
+  all images. */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
   }
 }
