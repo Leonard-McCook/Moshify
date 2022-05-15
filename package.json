@@ -1,0 +1,25 @@
+{
+  "name": "moshify",
+  "version": "1.0.0",
+  "description": "",
+  "targets": { "main":false }, 
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leonard-McCook/Moshify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leonard-McCook/Moshify/issues"
+  },
+  "homepage": "https://github.com/Leonard-McCook/Moshify#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
+
