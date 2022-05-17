@@ -1,2 +1,1 @@
-# Moshify
-Cloud hosting mock page. 
+Cloud hosting landing page mock-up build mainly with HTML and CSS.
